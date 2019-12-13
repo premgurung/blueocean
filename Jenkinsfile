@@ -40,6 +40,9 @@ pipeline {
     }
 
     stage('Prod') {
+      when {
+           branch 'master'
+      }
       steps {
         echo 'Production'
       }
